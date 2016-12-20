@@ -1,0 +1,30 @@
+﻿{% extends "./base.html" %}
+    {% block content %}
+    <div class="well">
+        <div style="overflow: hidden;">
+            <form accept-charset="UTF-8" action="{{ url_for('cuestiones') }}" class="form-horizontal" id="new_user" method="post">
+                <div class="form-group">
+                    <label for="inputEmail" class="control-label col-xs-2">Email:</label>
+                    <div class="col-xs-8">
+                        <input type="email" class="form-control" name="id" id="inputEmail" placeholder="Email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="controls">
+                        <label class="radio col-xs-offset-2">
+                            <input type="radio" name="tipo" id="radioInfantil" value="infantil" required>Infantil
+                        </label>
+                        <label class="radio col-xs-offset-2">
+                            <input type="radio" name="tipo" id="radioPrimaria" value="primaria">Primaria
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-xs-offset-2 col-xs-10">
+                        <button type="submit" class="btn btn-primary">Comenzar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% endblock %}

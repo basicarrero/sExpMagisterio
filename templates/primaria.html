@@ -1,0 +1,289 @@
+﻿{% extends "./base.html" %}
+    {% block content %}
+    <div class="well">
+        <div style="overflow: hidden;">
+            <form accept-charset="UTF-8" action="{{ '/resultados/' + user }}" class="form-horizontal" id="user_profile" method="post">
+                <div class="form-group">
+                    <label class="col-xs-offset-2 col-xs-10">-¿Profesas alguna fe?</label>
+                    <div class="controls col-xs-offset-2 col-xs-10" style="margin-bottom:5px">
+                        <label class=" checkbox-inline">
+                            <input type="radio" name="hecho_creyente" value="Si" required>Si
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_creyente" value="No">No
+                        </label>
+                    </div>
+                    <label class="col-xs-offset-2 col-xs-10">-¿Eres practicante?</label>
+                    <div class="controls col-xs-offset-2 col-xs-10" style="margin-bottom:5px">
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_practicante" value="Si" required>Si
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_practicante" value="No">No
+                        </label>
+                    </div>
+                    <label class="col-xs-offset-2 col-xs-10">-¿Colaboras en las actividades de tu parroquia o templo?</label>
+                    <div class="controls col-xs-offset-2 col-xs-10" style="margin-bottom:5px">
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_colaboradorReligioso" value="Si" required>Si
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_colaboradorReligioso" value="No">No
+                        </label>
+                    </div>
+                    <label class="col-xs-offset-2 col-xs-10">-¿Crees que la religión es parte necesaria de un individuo completo?</label>
+                    <div class="controls col-xs-offset-2 col-xs-10" style="margin-bottom:5px">
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_religioso" value="Si" required>Si
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_religioso" value="No">No
+                        </label>
+                    </div>
+                    <label class="col-xs-offset-2 col-xs-10">-¿Piensas que la religión es necesaria para una formación académica completa en los colegios públicos?</label>
+                    <div class="controls col-xs-offset-2 col-xs-10" style="margin-bottom:5px">
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_proReligionCP" value="Si" required>Si
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_proReligionCP" value="No">No
+                        </label>
+                    </div>
+                    <hr style="border: 1px solid #a8a8a8; width: 850px; ">
+                    <label class="col-xs-offset-2 col-xs-10">-¿Practicas algún deporte habitualmente?</label>
+                    <div class="controls col-xs-offset-2 col-xs-10 " style="margin-bottom:5px">
+                        <label class=" checkbox-inline">
+                            <input type="radio" name="hecho_deportista" value="Si" required>Si
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_deportista" value="No">No
+                        </label>
+                    </div>
+                    <label class="col-xs-offset-2 col-xs-10">-¿Has realizado algún trabajo relacionado con el deporte, socorrista, entrenador?</label>
+                    <div class="controls col-xs-offset-2 col-xs-10" style="margin-bottom:5px">
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_deportistaProfesional" value="Si" required>Si
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_deportistaProfesional" value="No">No
+                        </label>
+                    </div>
+                    <label class="col-xs-offset-2 col-xs-10">-¿Consideras que tu forma física es buena?</label>
+                    <div class="controls col-xs-offset-2 col-xs-10" style="margin-bottom:5px">
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_buenaForma" value="Si" required>Si
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_buenaForma" value="No">No
+                        </label>
+                    </div>
+                    <label class="col-xs-offset-2 col-xs-10">-¿Juegas  algún equipo de tu localidad?</label>
+                    <div class="controls col-xs-offset-2 col-xs-10" style="margin-bottom:5px">
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_deporteEquipo" value="Si" required>Si
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_deporteEquipo" value="No">No
+                        </label>
+                    </div>
+                    <label class="col-xs-offset-2 col-xs-10">-¿Crees que el deporte ayuda a enseñar valores importantes?</label>
+                    <div class="controls col-xs-offset-2 col-xs-10" style="margin-bottom:5px">
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_entusiastaDeporte" value="Si" required>Si
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_entusiastaDeporte" value="No">No
+                        </label>
+                    </div>
+                    <hr style="border: 1px solid #a8a8a8; width: 850px; ">
+                    <label class="col-xs-offset-2 col-xs-10">-¿Has estado en el extranjero: cursos de inmersión lingüística, trabajando, etc.?</label>
+                    <div class="controls col-xs-offset-2 col-xs-10" style="margin-bottom:5px">
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_estanciaEstranjero" value="ingles">Pais Angloparlante
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_estanciaEstranjero" value="frances">Pais Francófono
+                        </label>
+                        <label class=" checkbox-inline">
+                            <input type="radio" name="hecho_estanciaEstranjero" value="No" required>No
+                        </label>
+                    </div>
+                    <label class="col-xs-offset-2 col-xs-10">-¿Has estudiado en academias de  idiomas o colegio bilingüe?</label>
+                    <div class="controls col-xs-offset-2 col-xs-10" style="margin-bottom:5px">
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_academiaIdiomas" value="ingles">Inglés
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_academiaIdiomas" value="frances">Francés
+                        </label>
+                        <label class=" checkbox-inline">
+                            <input type="radio" name="hecho_academiaIdiomas" value="No" required>No
+                        </label>
+                    </div>
+                    <label class="col-xs-offset-2 col-xs-10">-¿Tienes amigos extranjeros con los que hables inglés/francés?</label>
+                    <div class="controls col-xs-offset-2 col-xs-10" style="margin-bottom:5px">
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_amigosExtranjeros" value="ingles">Inglés
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_amigosExtranjeros" value="frances">Francés
+                        </label>
+                        <label class=" checkbox-inline">
+                            <input type="radio" name="hecho_amigosExtranjeros" value="No" required>No
+                        </label>
+                    </div>
+                    <label class="col-xs-offset-2 col-xs-10">-¿Alguno de tus padres habla un segundo idioma?</label>
+                    <div class="controls col-xs-offset-2 col-xs-10" style="margin-bottom:5px">
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_padreBilingue" value="ingles">Inglés
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_padreBilingue" value="frances">Francés
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_padreBilingue" value="otro">Otro
+                        </label>
+                        <label class=" checkbox-inline">
+                            <input type="radio" name="hecho_padreBilingue" value="No" required>No
+                        </label>
+                    </div>
+                    <label class="col-xs-offset-2 col-xs-10">-¿Lees  bibliografía, prensa, etc… en otros idiomas?</label>
+                    <div class="controls col-xs-offset-2 col-xs-10" style="margin-bottom:5px">
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_lecturaIdiomas" value="ingles">Inglés
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_lecturaIdiomas" value="frances">Francés
+                        </label>
+                        <label class=" checkbox-inline">
+                            <input type="radio" name="hecho_lecturaIdiomas" value="No" required>No
+                        </label>
+                    </div>
+                    <hr style="border: 1px solid #a8a8a8; width: 850px; ">
+                    <label class="col-xs-offset-2 col-xs-10">-¿Tocas algún instrumento musical?</label>
+                    <div class="controls col-xs-offset-2 col-xs-10 " style="margin-bottom:5px">
+                        <label class=" checkbox-inline">
+                            <input type="radio" name="hecho_instrumentoMusical" value="Si" required>Si
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_instrumentoMusical" value="No">No
+                        </label>
+                    </div>
+                    <label class="col-xs-offset-2 col-xs-10">-¿Cursas o has completado estudios en un conservatorio?</label>
+                    <div class="controls col-xs-offset-2 col-xs-10" style="margin-bottom:5px">
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_conservatorio" value="Si" required>Si
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_conservatorio" value="No">No
+                        </label>
+                    </div>
+                    <label class="col-xs-offset-2 col-xs-10">-¿Formas parte de algún grupo de música o baile?</label>
+                    <div class="controls col-xs-offset-2 col-xs-10" style="margin-bottom:5px">
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_grupoMusical" value="Si" required>Si
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_grupoMusical" value="No">No
+                        </label>
+                    </div>
+                    <label class="col-xs-offset-2 col-xs-10">-¿Crees que tienes habilidades  para la música o el canto?</label>
+                    <div class="controls col-xs-offset-2 col-xs-10" style="margin-bottom:5px">
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_cantante" value="Si" required>Si
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_cantante" value="No">No
+                        </label>
+                    </div>
+                    <label class="col-xs-offset-2 col-xs-10">-¿Te gusta la música clásica?</label>
+                    <div class="controls col-xs-offset-2 col-xs-10" style="margin-bottom:5px">
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_musicaClasica" value="Si" required>Si
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_musicaClasica" value="No">No
+                        </label>
+                    </div>
+                    <hr style="border: 1px solid #a8a8a8; width: 850px; ">
+                    <label class="col-xs-offset-2 col-xs-10">-¿Tienes algún amigo o familiar discapacitado?</label>
+                    <div class="controls col-xs-offset-2 col-xs-10 " style="margin-bottom:5px">
+                        <label class=" checkbox-inline">
+                            <input type="radio" name="hecho_experienciaDiscapacitados" value="Si" required>Si
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_experienciaDiscapacitados" value="No">No
+                        </label>
+                    </div>
+                    <label class="col-xs-offset-2 col-xs-10">-¿Conoces alguna bibliografía específica sobre algún tipo de discapacidad?</label>
+                    <div class="controls col-xs-offset-2 col-xs-10" style="margin-bottom:5px">
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_bibliografiaDiscapacidad" value="Si" required>Si
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_bibliografiaDiscapacidad" value="No">No
+                        </label>
+                    </div>
+                    <label class="col-xs-offset-2 col-xs-10">-¿Conoces el lenguaje de signos?</label>
+                    <div class="controls col-xs-offset-2 col-xs-10 " style="margin-bottom:5px">
+                        <label class=" checkbox-inline">
+                            <input type="radio" name="hecho_lenguaSignos" value="Si" required>Si
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_lenguaSignos" value="No">No
+                        </label>
+                    </div>
+                    <label class="col-xs-offset-2 col-xs-10">-¿Consideras el lenguaje como base de la educación?</label>
+                    <div class="controls col-xs-offset-2 col-xs-10" style="margin-bottom:5px">
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_lenguajeBase" value="Si" required>Si
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_lenguajeBase" value="No">No
+                        </label>
+                    </div>
+                    <label class="col-xs-offset-2 col-xs-10">-¿Crees que el lenguaje, por su papel en la comunicación, debe ser una prioridad educativa?</label>
+                    <div class="controls col-xs-offset-2 col-xs-10" style="margin-bottom:5px">
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_lenguajePrioridad" value="Si" required>Si
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_lenguajePrioridad" value="No">No
+                        </label>
+                    </div>
+                    <label class="col-xs-offset-2 col-xs-10">-¿La paciencia y el trabajo diario son algunas de tus virtudes?</label>
+                    <div class="controls col-xs-offset-2 col-xs-10" style="margin-bottom:5px">
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_paciente" value="Si" required>Si
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_paciente" value="No">No
+                        </label>
+                    </div>
+                    <label class="col-xs-offset-2 col-xs-10">-¿Es el trabajo constante y estructurado una de tus bases para la educación?</label>
+                    <div class="controls col-xs-offset-2 col-xs-10" style="margin-bottom:5px">
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_estructurado" value="Si" required>Si
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_estructurado" value="No">No
+                        </label>
+                    </div>
+                    <label class="col-xs-offset-2 col-xs-10">-¿Piensas que el trabajo individualizado es el mejor ámbito para ti?</label>
+                    <div class="controls col-xs-offset-2 col-xs-10" style="margin-bottom:5px">
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_trabajoIndividual" value="Si" required>Si
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="radio" name="hecho_trabajoIndividual" value="No">No
+                        </label>
+                    </div>
+                <div class="form-group">
+                    <div class="col-xs-offset-2 col-xs-10">
+                        <button type="submit" class="btn btn-primary">Finalizar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% endblock %}
